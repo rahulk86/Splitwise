@@ -9,10 +9,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "groupMembers")
-public class GroupMember extends BaseModel{
+@Table(name = "expenseParticipants")
+public class ExpenseParticipant extends BaseModel {
     @ManyToOne
-    private User user;
+    private GroupMember groupMember;
     @ManyToOne
-    private Group group;
+    private Expense expense;
+    private double ownAmount;
+    private double paidAmount;
 }
