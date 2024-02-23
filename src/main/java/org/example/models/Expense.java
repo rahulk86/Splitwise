@@ -15,6 +15,7 @@ public class Expense extends BaseModel{
     @ManyToOne
     private Group group;
     private LocalDateTime date;
+    private Currency currency;
     private String description;
     private Double amount;
     @OneToMany(mappedBy = "expense",cascade = CascadeType.DETACH)

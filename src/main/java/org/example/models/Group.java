@@ -15,7 +15,6 @@ import java.util.List;
 @Table(name = "splitwise_groups")
 public class Group extends BaseModel{
     private String name;
-    private Currency currency;
     private GroupType groupType;
     @OneToMany(mappedBy = "group",cascade = CascadeType.DETACH)
     private List<GroupMember> groupMembers;
