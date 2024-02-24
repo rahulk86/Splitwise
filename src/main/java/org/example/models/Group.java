@@ -1,5 +1,6 @@
 package org.example.models;
 
+import com.auth.modal.BaseModel;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -13,7 +14,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "splitwise_groups")
-public class Group extends BaseModel{
+public class Group extends BaseModel {
     private String name;
     private GroupType groupType;
     @OneToMany(mappedBy = "group",cascade = CascadeType.DETACH)

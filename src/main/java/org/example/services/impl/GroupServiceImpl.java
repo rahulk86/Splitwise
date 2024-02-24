@@ -1,15 +1,15 @@
 package org.example.services.impl;
 
+import com.auth.modal.user.User;
+import com.auth.repository.user.UserRepository;
 import org.example.dtos.GroupDto;
 import org.example.dtos.GroupMemberDto;
 import org.example.dtos.UserDto;
 import org.example.models.Group;
 import org.example.models.GroupMember;
 import org.example.models.GroupType;
-import org.example.models.User;
 import org.example.repositories.GroupMemberRepository;
 import org.example.repositories.GroupRepository;
-import org.example.repositories.UserRepository;
 import org.example.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,7 +50,6 @@ public class GroupServiceImpl implements GroupService {
                 User user = new User();
                 user.setName(groupMemberDto.getName());
                 user.setEmail(groupMemberDto.getEmail());
-                user.setVerified(false);
                 optionalUser = Optional.of(userRepository.save(user));
             }
 

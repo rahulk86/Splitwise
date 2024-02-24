@@ -1,5 +1,6 @@
 package org.example.models;
 
+import com.auth.modal.BaseModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;

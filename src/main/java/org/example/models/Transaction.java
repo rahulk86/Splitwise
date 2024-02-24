@@ -1,5 +1,6 @@
 package org.example.models;
 
+import com.auth.modal.BaseModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -10,7 +11,7 @@ import lombok.Setter;
     @Setter
     @Entity
     @Table(name = "transactions")
-    public class Transaction extends BaseModel{
+    public class Transaction extends BaseModel {
         @ManyToOne
         private ExpenseParticipant oweBy;
         @ManyToOne

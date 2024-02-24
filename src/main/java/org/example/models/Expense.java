@@ -1,5 +1,6 @@
 package org.example.models;
 
+import com.auth.modal.BaseModel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "expenses")
-public class Expense extends BaseModel{
+public class Expense extends BaseModel {
     @ManyToOne
     private Group group;
     private LocalDateTime date;
